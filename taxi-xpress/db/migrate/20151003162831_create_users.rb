@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :phone_number
       t.string :email, limit: 100
       t.string :password, limit: 12
-      t.string :type, limit: 1
+      t.string :type_user, limit: 1
 
       t.timestamps null: false
     end

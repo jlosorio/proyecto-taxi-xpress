@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20151003162924) do
     t.string   "license",    limit: 10
     t.string   "car_plate",  limit: 7
     t.string   "car_type",   limit: 10
+    t.string   "car_brand",  limit: 20
     t.string   "car_model",  limit: 20
     t.string   "car_color",  limit: 20
     t.string   "state",      limit: 10
@@ -44,7 +45,7 @@ ActiveRecord::Schema.define(version: 20151003162924) do
 
   create_table "routes", force: :cascade do |t|
     t.string   "description", limit: 200
-    t.decimal  "amount",                  precision: 8, scale: 2
+    t.decimal  "amount",                  precision: 5, scale: 2
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
   end
@@ -57,7 +58,7 @@ ActiveRecord::Schema.define(version: 20151003162924) do
     t.string   "car_type",             limit: 10
     t.string   "payment_type",         limit: 10
     t.datetime "demand_date"
-    t.decimal  "amount",                           precision: 8, scale: 2
+    t.decimal  "amount",                           precision: 5, scale: 2
     t.integer  "driver_id",            limit: 4
     t.string   "state",                limit: 10
     t.datetime "created_at",                                               null: false
@@ -70,7 +71,7 @@ ActiveRecord::Schema.define(version: 20151003162924) do
     t.integer  "phone_number", limit: 4
     t.string   "email",        limit: 100
     t.string   "password",     limit: 12
-    t.string   "type",         limit: 1
+    t.string   "type_user",    limit: 1
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end

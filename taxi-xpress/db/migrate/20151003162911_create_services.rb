@@ -8,7 +8,7 @@ class CreateServices < ActiveRecord::Migration
       t.string :car_type, limit: 10
       t.string :payment_type, limit: 10
       t.datetime :demand_date
-      t.decimal :amount, precision: 8, scale: 2
+      t.decimal :amount, precision: 5, scale: 2
       t.integer :driver_id
       t.string :state, limit: 10
 
